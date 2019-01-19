@@ -2,11 +2,15 @@ const path = require('path')
 
 module.exports = {
     entry: {
-        klopps: './src/main.js'
+        main: './src/main.js'
     },
     mode: 'development',
     output: {
         filename: "[name]-bundle.js", // name replaced by entry key name (i.e. main: without the colon)
-        path: path.resolve(__dirname, '../dist')
+        path: path.resolve(__dirname, '../dist'),
+        publicPath: "/" // subfolder to put bundle in (no subfolder = "/")
+    },
+    devServer: {
+        contentBase: "dist"
     }
 }
