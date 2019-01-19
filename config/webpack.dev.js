@@ -1,9 +1,12 @@
-// Some extensions  @disabled
-// Silly [ts] error hints disappered after looking at extensions filtered by @builtin javascript 
-// 'TS and JS Language Features' disabled for workspace.
-// Also disabled for workspace: JSLint extension
-module.exports {
-    entry: {},
-    mode: '',
-    output: {}
+const path = require('path')
+
+module.exports = {
+    entry: {
+        klopps: './src/main.js'
+    },
+    mode: 'development',
+    output: {
+        filename: "[name]-bundle.js", // name replaced by entry key name (i.e. main: without the colon)
+        path: path.resolve(__dirname, '../dist')
+    }
 }
