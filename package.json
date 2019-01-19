@@ -1,0 +1,12 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "description": "Webpack experiment based on Udemy course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["webpack"],
+  "author": "Oliver Schafeld <info@schafeld.com> (https://www.schafeld.com/)",
+  "license": "MIT"
+}
