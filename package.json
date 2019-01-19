@@ -1,12 +1,19 @@
 {
-  "name": "project1",
+  "name": "webpack-experiment-project1",
   "version": "1.0.0",
-  "description": "Webpack experiment based on Udemy course",
+  "description": "Webpack experiment based on Udemy course and other sources.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["webpack"],
+  "keywords": [
+    "webpack"
+  ],
   "author": "Oliver Schafeld <info@schafeld.com> (https://www.schafeld.com/)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  }
 }
