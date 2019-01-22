@@ -27,5 +27,8 @@ It may be necessary to install webpack-dev-server globally
 Then it can be used for development with hotreloading like this
 ```webpack-dev-server --config=config/webpack.dev.js``` 
 
+The same command is configured to be run with
+```npm run start```
+
 ### License
 MIT

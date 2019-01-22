@@ -11,7 +11,8 @@ module.exports = {
         publicPath: "/" // subfolder to put bundle in (no subfolder = "/")
     },
     devServer: {
-        contentBase: "dist"
+        contentBase: "dist",
+        overlay: true // show errors in page overlay, not only in console (rquires restart of webpack-dev-server)
     },
     module: {
         rules: [
@@ -23,6 +24,37 @@ module.exports = {
                     },
                     {
                         loader: 'css-loader'
+                    }
+                ]
+            },
+            {
+                test: /\.html$/,
+                use: [ // these loaders will run in reverse order
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: "[name].html"
+                        }
+                    },
+                    {
+                        loader: 'extract-loader'
+                    },
+                    {
+                        loader: 'html-loader',
+                        options: {
+                            attrs: ["img:src"]
+                        }
+                    }
+                ]
+            },
+            {
+                test: /\.(jpg|gif|png)$/,
+                use: [ // these loaders will run in reverse order
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: "images/[name]-[hash:8].[ext]"
+                        }    
                     }
                 ]
             }

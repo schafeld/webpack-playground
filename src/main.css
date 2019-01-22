@@ -1,12 +1,27 @@
 body {
-    color: red;
+  margin: 0;
+  background-color: #444;
 }
-p {
-    color: black;
+
+.profile {
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-flow: column;
 }
-.centerbox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: sans-serif;
+
+img {
+  border: 5px;
+  width: 300px;
+  margin: 130px 0 -120px 0
+}
+
+h1 {
+  font-size: 5em;
+  font-family: sans-serif;
+  color: white;
+  text-shadow: 0 0 20px black;
+  text-align: center;
 }
